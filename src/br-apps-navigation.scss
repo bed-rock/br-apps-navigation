@@ -1,11 +1,14 @@
 @import '../../bedrock/scss/variables';
 @import 'variables';
 
+:host {
+  position: relative;
+}
+
 .apps-list {
   display: flex;
   flex-wrap: wrap;
-  max-width: 300px;
-  padding: 2rem;
+  padding: 2rem 1.5rem;
   overflow: auto;
   list-style-type: none;
   background: #fff;

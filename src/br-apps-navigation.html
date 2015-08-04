@@ -9,10 +9,9 @@
 
     <button on-click='_toggleSelect'>
       <br-icons icon="{{icon}}"></br-icons>
-      <i class="icon-caret"></i>
     </button>
 
-    <br-select-box>
+    <br-select-box class$="{{position}}">
 
       <ul class="apps-list">
         <template is="dom-repeat" items="{{options}}">
@@ -38,7 +37,8 @@
           type: Array,
           value: []
         },
-        icon: String
+        icon: String,
+        position: String
       },
 
       _toggleSelect: function(){
