@@ -1,5 +1,5 @@
 {
-  "name": "br-apps-navigation",
+  "name": "br-selectbox",
   "version": "0.0.1",
   "devDependencies": {
     "autoprefixer-core": "^5.2.1",

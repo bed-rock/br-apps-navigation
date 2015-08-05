@@ -3,48 +3,57 @@
 <link rel="import" type="html" href="../../br-icons/src/br-icons.html">
 
 <dom-module id="br-apps-navigation">
-  <link rel="import" type="css" href="../dist/css/br-apps-navigation.css">
+<link rel="import" type="css" href="../dist/css/br-apps-navigation.css">
 
-  <template>
+<template>
 
-    <button on-click='_toggleSelect'>
-      <br-icons icon="{{icon}}"></br-icons>
-    </button>
+  <br-icons icon="{{icon}}"></br-icons>
 
-    <br-select-box class$="{{position}}">
+  <br-select-box class$="{{position}}">
 
-      <ul class="apps-list">
-        <template is="dom-repeat" items="{{options}}">
-          <li class="apps-list--item">
-            <a class="apps-list--link" href="{{item.link}}">
-              <img class="apps-list--icon" src="{{item.img}}"/>
-              <span class="apps-list--text">{{item.text}}</span>
-            </a>
-          </li>
-        </template>
-      </ul>
+  <ul class="apps-list">
+    <template is="dom-repeat" items="{{options}}">
+      <li class="apps-list--item">
+        <a class="apps-list--link" href="{{item.link}}">
+          <img class="apps-list--icon" src="{{item.img}}"/>
+          <span class="apps-list--text">{{item.text}}</span>
+        </a>
+      </li>
+    </template>
+  </ul>
 
-    </br-select-box>
+</br-select-box>
 
-  </template>
+</template>
 
-  <script>
-    Polymer({
-      is: 'br-apps-navigation',
+<script>
+  Polymer({
+    is: 'br-apps-navigation',
 
-      properties: {
-        options: {
-          type: Array,
-          value: []
-        },
-        icon: String,
-        position: String
+    properties: {
+      options: {
+        type: Array,
+        value: []
       },
+      icon: String,
+      position: String
+    },
 
-      _toggleSelect: function(){
-        Polymer.dom(this.root).querySelector('br-select-box').classList.toggle('open');
-      }
-    });
-  </script>
+    listeners: {
+      'click': '_toggleSelect'
+    },
+
+    ready: function() {
+      var apps = this;
+      apps.addEventListener('click', function(event) {
+        event.stopPropagation();
+      }, false);
+    },
+
+    _toggleSelect: function(){
+      Polymer.dom(this.root).querySelector('br-select-box').classList.toggle('open');
+    }
+  });
+</script>
 
 </dom-module>

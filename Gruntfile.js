@@ -27,7 +27,7 @@ module.exports = function (grunt) {
       },
       single_file: {
         files: {
-          'dist/css/br-apps-navigation.css': 'src/br-apps-navigation.scss'
+          'dist/css/br-select.css': 'src/br-select.scss'
         }
       }
     },
