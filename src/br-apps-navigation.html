@@ -3,7 +3,7 @@
 <link rel="import" type="html" href="../../br-icons/src/br-icons.html">
 
 <dom-module id="br-apps-navigation">
-<link rel="import" type="css" href="../dist/css/br-apps-navigation.css">
+<link rel="import" type="css" href="../dist/css/br-apps-navigation.min.css">
 
 <template>
 
@@ -43,14 +43,8 @@
       'click': '_toggleSelect'
     },
 
-    ready: function() {
-      var apps = this;
-      apps.addEventListener('click', function(event) {
-        event.stopPropagation();
-      }, false);
-    },
-
-    _toggleSelect: function(){
+    _toggleSelect: function(event) {
+      event.stopPropagation();
       Polymer.dom(this.root).querySelector('br-select-box').classList.toggle('open');
     }
   });

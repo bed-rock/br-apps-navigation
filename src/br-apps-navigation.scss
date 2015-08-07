@@ -25,11 +25,12 @@
   border: 1px solid transparent;
   border-radius: 2px;
   overflow: hidden;
+  text-decoration: none;
 
   &:hover,
   &:focus,
   &:active {
-    text-decoration: none;
+    // text-decoration: none;
     border-color: $color-white-10;
   }
 }
