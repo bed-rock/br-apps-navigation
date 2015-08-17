@@ -12,6 +12,10 @@
   overflow: auto;
   list-style-type: none;
   background: #fff;
+
+  @media (min-width: $screen-tablet + 1) {
+    width: 288px;
+  }
 }
 
 .apps-list--item {
@@ -30,7 +34,6 @@
   &:hover,
   &:focus,
   &:active {
-    // text-decoration: none;
     border-color: $color-white-10;
   }
 }
