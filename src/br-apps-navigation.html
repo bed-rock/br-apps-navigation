@@ -14,7 +14,7 @@
   <ul class="apps-list">
     <template is="dom-repeat" items="{{options}}">
       <li class="apps-list--item">
-        <a class="apps-list--link" href="{{item.link}}">
+        <a id={{item.id}} class="apps-list--link" href="{{item.link}}">
           <img class="apps-list--icon" src="{{item.img}}"/>
           <span class="apps-list--text">{{item.text}}</span>
         </a>
