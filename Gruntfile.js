@@ -27,7 +27,7 @@ module.exports = function (grunt) {
       },
       single_file: {
         files: {
-          'dist/css/br-select.css': 'src/br-select.scss'
+          'dist/css/br-apps-navigation.css': 'src/br-apps-navigation.scss'
         }
       }
     },
@@ -86,7 +86,7 @@ grunt.loadNpmTasks('grunt-contrib-watch');
 grunt.loadNpmTasks('grunt-contrib-sass');
 grunt.loadNpmTasks('grunt-postcss');
 
-grunt.registerTask( 'default', [ 'sass', 'postcss' ] );
+grunt.registerTask( 'default', [ 'sass', 'postcss', 'cssmin' ] );
 grunt.registerTask( 'css', [ 'sass', 'postcss', 'cssmin' ] );
 grunt.registerTask( 'js', [ 'uglify'] );
 

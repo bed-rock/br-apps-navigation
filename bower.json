@@ -1,13 +1,13 @@
 {
-  "name": "br-selectbox",
+  "name": "br-apps-navigation",
   "version": "0.0.1",
-  "homepage": "https://github.com/bed-rock/br-selectbox",
+  "homepage": "https://github.com/bed-rock/br-apps-navigation",
   "authors": [
     "cbfranca <cleidsonbf@gmail.com>",
     "marcelo-ribeiro <marceloribeiromidia@gmail.com>"
   ],
   "description": "A mobile-friendly select box web component with search and multi select built with polymer",
-  "main": "br-selectbox.html",
+  "main": "br-apps-navigation.html",
   "keywords": [
     "webcomponents",
     "polymer",
